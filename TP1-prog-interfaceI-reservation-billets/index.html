@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes par travail</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <h1>Achat de billets d'autobus</h1>
+    <nav>
+        <button class="nav1 active"></button>
+        <hr>
+        <button class="nav2"></button>
+        <hr>
+        <button class="nav3"></button>
+        <hr>
+        <button class="nav4"></button>
+    </nav>
+    <form method="get" action = ""> 
+        <div class="form-style" id="form1">
+            <h2>Étape 1 - Informations personnelles</h2>
+            <ul>
+                <li>
+                    <label for="nom"  class="field-long">Nom complet<span class="required">*</span></label>
+                        <input type="text" name="nom" value="" required/>
+                </li>
+                <li>
+                    <label for="courriel"  class="field-long">Courriel<span class="required">*</span></label>
+                        <input type="email" name="courriel" value="" required/>
+                </li>
+                <li>
+                    <label for="telephone"  class="field-long">Numéro de téléphone<span class="required">*</span></label>
+                        <input type="text" name="telephone" value="" required/>
+                </li>
+                <li>
+                    <input type="button" name="btnSuivant1" value="Continuer"  class="button-contact"/>
+                </li>
+            </ul>
+        </div>
+        <div class="form-style" id="form2">
+            <h2>Étape 2 - Informations sur la destination</h2>
+            <ul>
+                <li>
+                    <label for="date-start"  class="field-long">Date départ<span class="required">*</span></label>
+                        <input type="date" name="date-start" value="" required/>
+                </li>
+                <li>
+                    <div>
+                        <label for="aller-retour">Aller-retour</label>
+                            <input type="checkbox" name="aller-retour" value="1" />
+                    </div>
+                </li>
+                <li class="aller-retour">
+                    <label for="date-end"  class="field-long">Date retour<span class="required">*</span></label>
+                        <input type="date" name="date-end" value=""/>
+                </li>
+                <li>
+                    <label for="destination">Destination <span class="required">*</span></label>
+                    <select class="field-long" name="destination"><!--pas sélect multiple, mais je n'ai pas renommé ma variable-->
+                        <option value = "Choisissez-une destination">- Choisissez une destination -</option>
+                        <option value = "Quebec" >Québec</option>
+                        <option value = "Sherbrooke" >Sherbrooke</option>
+                        <option value = "Rouyn_Noranda" >Rouyn-Noranda</option>
+                    </select>
+                </li>
+                <li class="bouton-style">
+                    <input type="button" name="btnPrecedent2" value="Retour"  class="btnPrecedent"/>
+                    <input type="button" name="btnSuivant2" value="Continuer"  class="btnSuivant"/>
+                </li>
+            </ul>
+        </div>
+        <div class="form-style" id="form3">
+            <h2>Étape 3 - Informations sur le billet</h2>
+                <label for="nbBillet"  class="field-long">Nombre de billets<span class="required">*</span></label>
+                <input type="number" name="nbBillet" id="" min="1" max="5" value="0">
+                <div class="liste-billets-rabais">
+                    <div class="typeDeBillet invisible">
+                        <input type = "radio" name = "rabais_1"  value="0" checked>       
+                            <label for="billet-regulier">Tarif régulier</label>
+                        <input type = "radio" name = "rabais_1" value="15">
+                            <label for="billet-etudiant">Tarif étudiant</label>
+                        <input type = "radio" name = "rabais_1" value="20">
+                            <label for="billet-seniro">Tarif sénior</label>
+                        <input type = "radio" name = "rabais_1" value="25">
+                            <label for="billet-elite">Tarif membre élite</label>
+                    </div>
+                </div>
+            <div class="bouton-style">
+                <input type="button" name="btnPrecedent3" value="Retour"  class="btnPrecedent"/>
+                <input type="button" name="btnSuivant3" value="Résumé de la commande"  class="btnSuivant"/>
+            </div> 
+        </div> 
+        <div class="form-style" id="form4">
+            <h2>Étape 4 - Résumé</h2>
+            <div class="info-perso">
+                <h3 class="info-perso">Informations personnelles</h3>
+                <div class="nom"></div>
+                <div class="courriel"></div>
+                <div class="telephone"></div>
+            </div>
+
+            <h3>Destination</h3>
+            <div class="destination">
+                <div class="ville"></div>
+                <div class="aller"></div>
+                <div class="date-depart"></div>
+                <div class="date-retour"></div>
+            </div>
+            <h3>Billets</h3>
+            <div class="nom-du-billet">
+                <div class="billet-et-prix">
+                    <div class="billet-1"></div>
+                    <!--<hr class="line">-->
+                    <div class="prix"></div>
+                    <div class="rabais"></div>
+                </div>
+            </div>
+            <div class="liste-billet-formulaire"></div>
+            <div class="calcul">
+                <div class="facture">
+                    <div>Sous-Total</div>
+                    <div class="sous-total"></div>
+                </div>
+                <div class="facture">
+                    <div>TPS</div>
+                    <div class="tps"></div>
+                </div>
+                <div class="facture">
+                    <div>TVQ</div>
+                    <div class="tvq"></div>
+                </div>
+                <div class="facture">
+                    <div>Total</div>
+                    <div class="total"></div>
+                </div>
+            </div>
+            <div class="bouton-style">
+                <input type="button" name="btnPrecedent4" value="Modifier la commande"  class="btnPrecedent"/>
+                <input type="button" name="btnSuivant4" value="Procéder au paiement"  class="btnSuivant"/>
+            </div> 
+        </div> 
+
+    </form>
+</body>
+</html>
+
+

@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:300');
+
+html{
+    width: 100%;
+}
+body{
+    max-width: 100%;
+}
+
+h1{
+    text-align: center;
+    color: black;
+    padding: 30px 0;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2em;
+}
+p{
+    margin-top: 50px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+ul, li{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.form-style { 
+    max-width: 600px;
+    padding: 50px; 
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: rgb(44, 222, 222, 0.5);
+    border-radius: 10px;
+}
+
+li {
+    display: block;
+    margin-top: 20px; 
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 400px;
+}
+
+label{
+    padding:3px;
+    display:block;
+    font-weight: normal;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    margin: auto;
+    
+}
+
+.form-style input[type="text"], 
+.form-style input[type="email"], 
+.form-style input[type="phone"],
+.form-style input[type="date"],
+.form-style select{
+    box-sizing: border-box;
+    border-radius: 5px; 
+    border:1px solid tomato;
+    box-shadow: 1px 1px 3px black;
+    padding: 10px; 
+    margin:0px;
+    width: 100%;
+}
+.form-style select:focus, 
+.form-style input[type="text"]:focus,
+.form-style input[type="email"]:focus, 
+.form-style input[type="phone"]:focus,
+.form-style input[type="date"]:focus{
+    box-shadow: 0 0 8px black;
+    border: 1px solid aqua;
+    border-radius: 5px;
+    outline: 1px solid white;
+    -moz-box-shadow: 0 0 8px black;
+    -webkit-box-shadow: 0 0 8px black;
+}
+.form-style select, input[type="text"]{
+    color: grey;
+}
+
+.form-style .field-long{
+    width: 100%;
+}
+
+.form-style input[type=submit], 
+.form-style input[type=button]{
+    background: tomato;
+    padding: 10px 20px;
+    box-shadow: 2px 2px 5px tomato;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 30px;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    box-shadow: 1px 1px 3px black;
+}
+.form-style input[type=submit]:hover, 
+.form-style input[type=button]:hover{
+    background-color: rgb(44, 222, 222);
+    color: white;
+    box-shadow: 2px 2px 5px black;
+    transition-delay: 0.1s;
+    transition-duration: 0.2s;
+    font-size: 1.2em;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+}
+
+.form-style .required{
+    color:red;
+} 
+h2{
+    text-align: center;
+    color: black;
+}
+p{
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.form-style div:not([id=form4] div){
+    display: inline-flex;
+    align-items: left;
+    text-align: left;
+    margin: 20px 0;
+    margin-left: 0;
+    margin-right: 30px;
+}
+
+.bouton-style{
+    gap: 20px;
+}
+
+.nav1,
+.nav2,
+.nav3,
+.nav4 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    border: 1px solid tomato;
+    box-shadow: 1px 1px 3px black;
+}
+
+.active{
+    background-color: tomato;
+
+}
+nav{
+    display: flex;
+    flex-direction : row;
+    margin: auto;
+    justify-content: space-around;
+    width: 380px;
+    margin-bottom: 60px;
+}
+
+.displayBlock,
+.liste-billets-rabais { /* ne fonctionne pas pourquoi ??? */
+    display: flex;
+    flex-direction: column;
+}
+.invalide{
+    outline: 2px solid red;
+}
+
+input:invalid{
+    border: 2px solid red;
+}
+
+.invisible{
+    display: none!important;
+}
+
+.info-perso>div,
+.destination>div {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    line-height: 2em;
+}
+.billet-et-prix{
+    display: flex;
+    flex-direction: row;
+    justify-content: justify;
+    margin-bottom: 20px;
+}
+.prix{
+    margin-left: auto;
+}
+.line{
+    border-top: 1px dotted black;
+    width: 360px;
+    margin-top: 12px;
+}
+
+nav hr{
+    border-top: 1px solid grey;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    width: 50px;
+}
+.calcul{
+    display: flex;
+    flex-direction: column;
+}
+.facture{
+    display: flex;
+    flex-direction: row;
+    justify-content: justify;
+    margin-bottom: 20px;
+}
+
+[id=Form4]>*{
+    margin-bottom: 20px;
+}
+.facture>*:last-child{
+    margin-left: auto;
+}
+
+
